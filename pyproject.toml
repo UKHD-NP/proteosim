@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proteosim"
+version = "0.1.0"
+description = "Utilities for simulating bottom-up mass-spectrometry proteomics experiments."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Proteosim Developers" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyteomics",
+    "matplotlib",
+	"ipykernel", # for usage in jupyter notebookes
+]
+
+[tool.setuptools.packages.find]
+include = ["proteosim*"]
