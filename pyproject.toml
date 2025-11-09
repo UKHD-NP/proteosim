@@ -16,6 +16,7 @@ dependencies = [
     "pyteomics",
     "matplotlib",
 	"ipykernel", # for usage in jupyter notebookes
+	"pytest",
 ]
 
 [tool.setuptools.packages.find]
