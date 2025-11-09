@@ -232,4 +232,4 @@ def fragment_peptide(peptide):
         b_ions.append(peptide[: pos + 1])
         y_ions.append(peptide[pos:])
 
-    return b_ions[:-1] + y_ions[1:]
+    return list(set(b_ions + y_ions))
