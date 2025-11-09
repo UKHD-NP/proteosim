@@ -51,4 +51,4 @@ def test_calculate_mz_collection():
 def test_fragment_peptide():
     fragments = fragment_peptide("PEPT")
 
-    assert set(fragments) == set(["P", "PE", "PEP", "EPT", "PT", "T"])
+    assert set(fragments) == set(["P", "PE", "PEP", "PEPT", "EPT", "PT", "T"])
