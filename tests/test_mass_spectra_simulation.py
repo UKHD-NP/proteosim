@@ -1,6 +1,6 @@
 import pytest
 
-from proteosim.simulate_mass_spectra import (
+from proteosim.mass_spectra_simulation import (
     select_retention_time_window,
     calculate_mol_mass,
     calculate_mol_mass_collection,
