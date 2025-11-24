@@ -30,7 +30,7 @@ main steps:
 - fasta file handling: `read_fasta`
 - protein digestion: `digest_protein_sequence`, `digest_protein_collection`, `compute_sequence_coverage` and the variable `enzyme_cleavage_patterns`
 - liquid chromatography: `predict_lc_retention_times`, `plot_retention_time`
-- mass spectrometry simulation: `select_retention_time_window`, `calculate_mol_mass`, `calculate_mol_mass_collection`, `calculate_mz`, `calculate_mz_collection`, `plot_ms1`, `fragment_peptide`, plus the variable `amino_acid_mass_dalton`
+- mass spectrometry simulation: `select_retention_time_window`, `calculate_mol_mass`, `calculate_mol_mass_collection`, `calculate_mz`, `calculate_mz_collection`, `plot_spectrum`, `fragment_peptide`, plus the variable `amino_acid_mass_dalton`
 
 Together, these pieces let you:
 

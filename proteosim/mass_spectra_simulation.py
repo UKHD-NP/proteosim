@@ -160,7 +160,7 @@ def calculate_mz_collection(peptide_mass_map, charge=2, proton_mass=1.007):
     return mz_map
 
 
-def plot_ms(mz_values, random_count_range=None):
+def plot_spectrum(mz_values, random_count_range=(0, 30000), seed=42):
     """
     Plot a simple MS1 spectrum based on m/z occurrences.
 
@@ -168,8 +168,10 @@ def plot_ms(mz_values, random_count_range=None):
     ----------
     mz_values : list of float
         Mass-to-charge ratios observed in the scan.
-    random_count_range : tuple, optional
+    random_count_range : tuple or None, optional
         (min, max) range for uniform random counts overriding actual frequencies.
+    seed : int or None, optional
+        Seed to initialize the random number generator. Set to None for stochastic runs.
 
     Returns
     -------
@@ -192,8 +194,9 @@ def plot_ms(mz_values, random_count_range=None):
 
     if random_count_range is not None:
         low, high = random_count_range
+        rng = random.Random(seed)
         intensities = [
-            int(round(random.uniform(low, high))) for _ in mz_positions
+            int(round(rng.uniform(low, high))) for _ in mz_positions
         ]  # uniform random counts
     else:
         intensities = [pair[1] for pair in mz_sorted]

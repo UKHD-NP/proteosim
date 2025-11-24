@@ -16,6 +16,6 @@ from .mass_spectra_simulation import (
     calculate_mol_mass_collection,
     calculate_mz,
     calculate_mz_collection,
-    plot_ms,
+    plot_spectrum,
     fragment_peptide,
 )
